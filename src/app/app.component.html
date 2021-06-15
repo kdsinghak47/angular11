@@ -1,0 +1,16 @@
+<h1>Important event in Angular </h1>
+
+<button (click)="event('check before submission')">submit</button>
+<br> <br>
+<!--input type="text" #box (keyup)="event(box.value)" /-->
+<!--input type="text" #box (keyup.enter)="event(box.value)" /-->
+<!--input type="text" #box (keyup.space)="event(box.value)" /-->
+<input type="text" #box (keydown.enter)="event(box.value)" />
+<br> <br>
+<input type="text" (keydown.enter)="event(box.value)" (blur)="event('blur event')" />
+<br> <br>
+<div
+(mouseenter)="event('mouse in')"
+ style="background-color:skyblue;" >
+ mouse events
+</div>
